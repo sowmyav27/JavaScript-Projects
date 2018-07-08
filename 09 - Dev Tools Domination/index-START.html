@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+console.log("Hello");
+    // Interpolated
+console.log("Hey I am %s",'Sowmya');
+    // Styled
+    console.log("%c I am some text!!!",'font-size: 20px; background:green; text-shadow: 150px 150px 0 blue');
+
+    // warning!
+console.warn("I am a warning.")
+    // Error :|
+console.error("I am an error.")
+    // Info
+console.info("I am an info.")
+    // Testing
+console.assert(1===0,'It is false')
+    // clearing
+console.clear();
+    // Viewing DOM Elements
+    const p = document.querySelector('p');
+console.log(p);
+console.dir(p);
+    // Grouping together
+dogs.forEach(dog => {
+  console.group(`${dog.name}`);
+  console.log(`this is a ${dog.name}`);
+  console.log(`Age of ${dog.name} is ${dog.age}`);
+  console.groupEnd(`${dog.name}`);
+})
+    // counting
+console.count('wes');
+console.count('wes');
+console.count('wes');
+console.count('wes');
+console.count('wes');
+console.count('wes');
+console.count('wes');
+
+
+  </script>
+</body>
+</html>
